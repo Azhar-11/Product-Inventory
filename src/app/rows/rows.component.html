@@ -1,0 +1,94 @@
+<div class="card ">
+  <div class="split right" style="padding-top: 70px; padding-left:50px;">
+    <h2>Selected Product</h2>
+    <form [formGroup]="userForm">
+      <div>
+        <div class="form-row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label> Name </label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="text" formControlName="name" class="form-control" placeholder="name">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label> SKU </label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="text" formControlName="sku" class="form-control" placeholder="SKU">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label> Description </label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="text" formControlName="desc" class="form-control" placeholder="Description">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label> Price </label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="text" formControlName="price" class="form-control" placeholder="Price">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <label> Stock Level </label>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="text" formControlName="stocklevel" class="form-control" placeholder="Stock Level">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="form-row mt-4">
+            <div class="col-md-6">
+              <button type="button" class="button" (click)="addItem()">Create</button> &nbsp; &nbsp;
+              &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+              <button type="button" class="button" (click)="reset()">Clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-8 mt-4 mb-4 split left" style="padding-top: 70px; padding-left: 40px;">
+    <h2 style="text-align: center;">Product Inventory</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>SKU</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Stock Level</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listData">
+          <td>{{item.name}}</td>
+          <td>{{item.sku}}</td>
+          <td>{{item.desc}}</td>
+          <td>{{item.price}}</td>
+          <td>{{item.stocklevel}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="removeItems(item)">Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

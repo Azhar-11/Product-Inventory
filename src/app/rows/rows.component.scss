@@ -1,0 +1,58 @@
+table,
+  td,
+  th {
+    border: 1px solid rgb(202, 200, 200);
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .left {
+    left: 0;
+    margin-left: 0px;
+    
+  }
+
+  .right {
+    left:80%;
+    right: 0%;
+    margin-left: 0px;
+  }
+
+  .centered {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .button {
+        background-color: #1976d2; /* Blue */
+        border: none;
+        color: white;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        padding: 5px;
+    }
